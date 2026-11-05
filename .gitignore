@@ -8,3 +8,7 @@ wheels/
 
 # Virtual environments
 .venv
+
+.env
+.claude/settings.local.json
+node_modules/
