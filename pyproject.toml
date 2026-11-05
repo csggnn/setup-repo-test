@@ -6,9 +6,24 @@ readme = "README.md"
 authors = [
     { name = "gianni", email = "gianni.casagrande.mail@gmail.com" }
 ]
+license = "MIT"
 requires-python = ">=3.12"
 dependencies = []
 
 [build-system]
 requires = ["uv_build>=0.13.1,<0.14.0"]
 build-backend = "uv_build"
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "SIM", "C90", "RUF"]
+
+[tool.ruff.lint.mccabe]
+max-complexity = 10
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+]
